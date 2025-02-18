@@ -1,0 +1,38 @@
+There are four sprites
+  1. Cannon
+  2. Projectile
+  3. Target (s?)
+  4. PID SLIDER
+
+Sprites have the following functions and characteristics
+  1. Cannon:
+    1.1 Given a mouse pointer location, moves towards target angle
+        1.1.1 Mouse Pointer must be in "Cannon Area" and not in "PID SLIDER"
+        1.1.2 Moves to 0 position when pointer goes into "PID Slider Area"
+    1.2 Given space bar key press, fires
+    1.3 Has rotational inertia 
+    1.4 Modeled as a motor driven load
+    1.5 Position is based on PID loop (tracker)
+        1.5.1 Loop Variables: 
+          SP - Current Mouse pointer position derived angle
+          PV - Current Cannon Angle
+          CV - Motor Voltage
+          MV - Motor Speed
+    1.6? PID Loop Parameters can be adjusted with a slider or entered as numbers
+    1.7? Has noise in sensing and in actuation
+    1.8 Positioned centrally in page
+    
+  2. Projectile
+    2.1 Is projected when Cannon fires (1.2)
+    2.2 Moves off in fired direction (1.1) 
+      2.2.1 At speed x and slows down as it gets further away from cannon (air resistance)
+    2.3 If it hits a target, explodes and gives a point
+    2.5 If it hits an edge, flies away and respawns in Cannon
+  
+3. Targets (?): 
+    3.1 Look like planes, drones, etc.
+    3.2 Do fly by of the area, slowish, getting faster
+
+
+
+
